@@ -1,6 +1,5 @@
 //CRUD mongodb
-const { MongoClient, ObjectID } = require('mongodb');
-const { resolve } = require('path');
+const { MongoClient } = require('mongodb');
 
 // define url to conect to db
 const connectionURL = process.env.MONGODB_URL;
