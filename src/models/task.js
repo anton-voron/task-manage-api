@@ -24,7 +24,7 @@ const taskSchema = new mongoose.Schema(
 taskSchema.pre('save', async function (next) {
     const task = this;
     if (task.isModified()) {
-        console.log('Before saving ', task);
+        // console.log('Before saving ');
     } else {
         console.log('This was not been updated');
     }

@@ -7,7 +7,10 @@
     "start": "node src/index.js",
     "server": "/Users/a4085/mongodb/bin/mongod --dbpath=/Users/a4085/mongodb-data",
     "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "env-cmd -f ./config/test.env jest --watch --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +28,8 @@
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
-    "nodemon": "^2.0.4"
+    "jest": "^26.4.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
   }
 }
